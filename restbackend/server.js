@@ -10,9 +10,10 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+
 app.use(cors());
 
-// Luo MySQL-yhteys
+// Luo yhteys tietokantaana
 const db = mysql.createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USERNAME,
@@ -20,7 +21,7 @@ const db = mysql.createConnection({
   database: process.env.DB_DATABASE,
 });
 
-// Yhdistä MySQL-tietokantaan
+// Yhdistä tietokantaan
 db.connect((err) => {
   if (err) {
     console.error('Tietokantayhteyden virhe:', err);
