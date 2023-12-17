@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+
 function App() {
-  const [questions, setQuestions] = useState([]);
-  const [newQuestion, setNewQuestion] = useState('');
-  const [newAnswer, setNewAnswer] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [questions, setQuestions] = useState([]);// Kysymykset
+  const [newQuestion, setNewQuestion] = useState('');// Uusi kysymys
+  const [newAnswer, setNewAnswer] = useState('');// Uusi vastaus
+  const [loading, setLoading] = useState(false);// Latautuu
+  const [error, setError] = useState(''); // Virheilmoitus
 
   useEffect(() => {
     // Hae kaikki kysymykset alussa
